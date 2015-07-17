@@ -14,7 +14,7 @@ angular.module('myApp.home', ['ngRoute'])
 
 
 
-        var url = "http://80.85.85.222:9000/getCategory";
+        var url = "http://80.85.85.222/getCategory";
         console.log('URL built is ' + url)
 
 
