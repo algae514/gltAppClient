@@ -14,7 +14,7 @@ angular.module('myApp.viewEvents', ['ngRoute'])
 
 
 
-        var url = "http://localhost:9000/getEvent/" + currentCategory;
+        var url = "http://80.85.85.222:9000/getEvent/" + currentCategory;
         console.log('URL built is ' + url)
 
 
