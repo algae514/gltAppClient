@@ -21,11 +21,13 @@ angular.module('myApp.viewEvents', ['ngRoute'])
 
 
         var responsePromise = $http.get(url);
-
+        var respData;
+        
 
         responsePromise.success(function(data, status, headers, config) {
 //                    $scope.myData = data.eventName;
             console.log("data:" + data[0].eventName)
+            respData = data;
 
             $scope.events = data;
         });
@@ -39,12 +41,17 @@ angular.module('myApp.viewEvents', ['ngRoute'])
 
         $scope.goHome = function() {
             $location.path("/home");
-        }
+        };
 
-        $scope.viewDashBoard = function(eventName) {
-            currentEvent = eventName;
+        $scope.viewDashBoardPage = function(thisEle) {
+            console.log("recieved something >>"+respData[thisEle].eventName)
+            
+//            var eventName = eventEle;
+//            
+            currentEvent = respData[thisEle].eventName;
+            console.log("currentEvent : "+currentEvent)
             $location.path("/viewDashboard");
-        }
+        };
 
 
 

@@ -14,7 +14,7 @@ angular.module('myApp.viewDashboard', ['ngRoute'])
 
 
 
-        var url = "http://80.85.85.222:9000/getDashBoard/" + currentCategory;
+        var url = "http://80.85.85.222:9000/getDashBoard/" + currentCategory+"/"+currentEvent;
         console.log('URL built is ' + url)
 
 
