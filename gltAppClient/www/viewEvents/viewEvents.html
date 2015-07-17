@@ -1,0 +1,26 @@
+<span class="label label-danger">{{errorMessage }}</span>
+<h1>All Events</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="event in events">
+                    <td><span class="label label-primary" ng-click="viewDashBoard('{{event.eventName}}')" >{{event.eventName}}</span></td>
+                    <td>{{event.eventSchedule}}</td>
+                </tr>
+
+        </table>
+
+
+    </div>
+
+</div>
+
+
+<button ng-click="goHome()">Back </button>
