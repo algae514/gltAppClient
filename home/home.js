@@ -12,12 +12,12 @@ angular.module('myApp.home', ['ngRoute'])
 .controller('HomeCtrl', ['$scope','$location','$http',function($scope,$location,$http) {
 
 
+$scope.noReady = true;
 
-
-        var url = "http://80.85.85.222/getCategory";
+        var url = "http://localhost:9000/getCategory";
         console.log('URL built is ' + url)
 
-
+        
 
 
         var responsePromise = $http.get(url);
@@ -26,6 +26,7 @@ angular.module('myApp.home', ['ngRoute'])
 
         responsePromise.success(function(data, status, headers, config) {
 //                    $scope.myData = data.eventName;
+$scope.noReady = false;
             console.log("data:" + data[0])
             respData = data;
 

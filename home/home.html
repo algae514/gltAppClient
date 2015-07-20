@@ -3,16 +3,20 @@
         <H1>Home</h1>
     </div>
 </div>
-
-<div class="row"><div class="col-xs-12">
-        
-        
-        <div ng-repeat="cat in categories">
-                    <button type="button" ng-click="showEvents($index)"  class="btn btn-primary">{{cat}}</button>
-                    <br>
-                    <br>
+<center ng-show="noReady">
+<h1>Loading ...<br> Please check your internet connection if it takes too long to load</h1>
+</center>
+<div  ng-show="!noReady"> 
+<div class="row"  ng-repeat="cat in categories">
+    <div class="col-xs-2" ></div>
+    <div class="col-xs-8" >
+        <div class="panel panel-primary"  ng-click="showEvents($index)"  >
+            <div class="panel-heading">
+                {{cat}}
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-2" ></div>
 </div>
-        
-        
-        
-    </div></div>
+
+    </div>
