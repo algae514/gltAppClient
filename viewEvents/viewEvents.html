@@ -1,24 +1,40 @@
-<span class="label label-danger">{{errorMessage }}</span>
-<h1>All Events</h1>
+<ion-content scroll="true" >
+    <span class="label label-danger">{{errorMessage }}</span>
+    <h1>All Events</h1>
 
-
-
-
-<div class="row"  ng-repeat="event in events">
-    <div class="col-xs-12" >
-        <div class="panel panel-primary"  ng-click="viewDashBoardPage($index)" >
-            <div class="panel-heading">
-                Event
-            </div>
-            <div class="panel-body">
-                {{event.eventName}}
-            </div>        
-            <div class="panel-footer">
-                on {{event.eventSchedule}}
+    
+    <div class="row"  ng-repeat="event in events">
+        <div class="col-xs-12" >
+            <div class="panel panel-primary"  ng-click="viewDashBoardPage($index)" >
+                <div class="panel-heading">
+                    Event
+                </div>
+                <div class="panel-body">
+                    {{event.eventName}}
+                </div>        
+                <div class="panel-footer">
+                    on {{event.eventSchedule}}
+                </div>
             </div>
         </div>
     </div>
-</div>
+    
+    
+    
+    
+    
 
+<!--
+    <div class="card"  ng-repeat="event in events">
+        <div  ng-click="viewDashBoardPage($index)" >
+            <div class="item item-text-wrap">
+                {{event.eventName}}
+            </div>
+            <div class="item item-divider">
+                on {{event.eventSchedule}}
+            </div>
+        </div>
+    </div>-->
 
-<button ng-click="goHome()">Back </button>
+    <button ng-click="goHome()">Home</button>
+</ion-content>
